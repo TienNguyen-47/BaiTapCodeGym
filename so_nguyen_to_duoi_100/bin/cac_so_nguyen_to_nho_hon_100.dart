@@ -1,19 +1,20 @@
 import 'dart:io';
 import 'dart:math';
 
-void main() {
-  bool isPrime = true;
-  int SoNguyenTo = 1;
-  for (int i = 0; i < 100; i++) {
-    for (int t = 2; t <= i; t++) 
-    {
-      if (i % t == 0) 
-      {
+void main() {  
+  for(int a = 0; a < 100; a++)
+  {
+    bool isPrime = true;
+    int t = sqrt(a).floor();
+    for (int i = 2; i <= t; i++) {
+      if (a % i == 0) {
         isPrime = false;
         break;
       }
-      SoNguyenTo = i;                      
     }
-    print('$SoNguyenTo');               
-  } 
+    if(isPrime == true)
+    {
+      print('$a');
+    }
+  }
 }
