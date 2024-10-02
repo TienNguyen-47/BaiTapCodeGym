@@ -7,7 +7,7 @@ void main() {
   var Money = stdin.readLineSync();
   var USD = int.tryParse(Money ?? "");
   if (USD == null) {
-      print("bad year");
+      print("bad money");
   } else {
       var VND = rate * USD;
       print(VND);
